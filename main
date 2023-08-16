@@ -1,0 +1,87 @@
+#include<stdio.h>
+void display(void);
+void record(void);
+void sort(void);
+struct tourist
+{
+    char name[20];
+    char destination[20];
+    int days;
+    int amount;
+}
+t[3];
+
+main()
+{
+    int k,c;
+    do
+    {
+        printf("\nPress:\n1.Record\n2.Display\n3.Search\n0.Exit\nMake a choice:...");
+        scanf("%d",&c);
+        switch(c)
+        {
+        case 1:
+            record();
+            break;
+        case 2:
+            display();
+            break;
+         case 3:
+            sort();
+            printf("Data sorted successfully!\n");
+            break;
+        case 0:
+            printf("Good bye");
+            break;
+        default:
+            printf("Choice not found\n");
+        }
+
+    }while(c!=0);
+
+
+
+
+}
+void record(void)
+{
+    int i;
+    for(i=0;i<6;i++)
+    {
+        printf("Enter Name, Destination, Days spent and Amount to be paid:...");
+        scanf("%s%s%d%d",t[i].name,t[i].destination,&t[i].days,&t[i].amount);
+        return;
+    }
+}
+void display(void)
+{
+    int i;
+    printf("\nName\tDestination\tDays\tAmount\n===\t===========\t====\t======\n");
+    for(i=0;i<3;i++)
+    {
+        printf("%s\t%s\t%d\t%d\n",t[i].name,t[i].destination,t[i].days,t[i].amount);
+    }
+}
+
+
+void sort(void)
+{
+    int i,j,imin,min;
+    struct tourist temp;
+    for(i=0;i<2;i++)
+    {
+        min=t[i].amount;
+        imin=i;
+        for(j=i+1;j<3;j++)
+        {
+            if(t[j].amount<min)
+            {
+                min=t[j].amount;
+                imin=j;
+            }
+        }
+        temp=t[imin];
+        t[imin]=t[i];
+        t[i]=temp;
+    }
+}
