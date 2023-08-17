@@ -16,7 +16,7 @@ main()
     int k,c;
     do
     {
-        printf("\nPress:\n1.Record\n2.Display\n3.Search\n0.Exit\nMake a choice:...");
+        printf("\nPress:\n1.Record\n2.Display\n3.Search\n0.Exit\nMake a choice :...");
         scanf("%d",&c);
         switch(c)
         {
