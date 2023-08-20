@@ -48,7 +48,7 @@ void record(void)
     int i;
     for(i=0;i<6;i++)
     {
-        printf("Enter Name, destination, days spent and amount to be paid:...");
+        printf("Enter name, destination, days spent and amount to be paid:...");
         scanf("%s%s%d%d",t[i].name,t[i].destination,&t[i].days,&t[i].amount);
         return;
     }
