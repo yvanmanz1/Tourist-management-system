@@ -1,2 +1,2 @@
 Documentation
-This system contains a program that is designed to perform some functions of tourists handling in a tourism management company.
+This system includes a program that is designed to perform some tasks of a tourism management company. There a number of Functions that does the tasks.
